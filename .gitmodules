@@ -1,0 +1,6 @@
+[submodule "EdgeUI"]
+	path = EdgeUI
+	url = https://github.com/HamAndEggs/EdgeUI.git
+[submodule "appbuild"]
+	path = appbuild
+	url = https://github.com/HamAndEggs/appbuild.git
