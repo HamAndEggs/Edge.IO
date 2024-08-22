@@ -1,0 +1,16 @@
+{
+    "font1":
+    {
+        "type":"freetypefont",
+        "file":"./liberation_serif_font/LiberationSerif-Regular.ttf",
+        "size":60
+    },
+    "style1":{
+        "type":"style",
+        "background":"blue"
+    },
+    "root":{
+        "text":"Example",
+        "style":"style1"
+    }
+}
