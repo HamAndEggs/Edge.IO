@@ -88,7 +88,7 @@
                 "/usr/lib/x86_64-linux-gnu/graphene-1.0/include",
                 "./EdgeUI/include",
                 "./EdgeUI/source",
-                "./TinyJson",
+                "./EdgeUI/TinyJson",
                 "./"
             ],
             "libs": [
@@ -116,7 +116,8 @@
             "define": [
                 "DEBUG_BUILD",
                 "PLATFORM_GLES",
-                "USE_FREETYPEFONTS"
+                "USE_FREETYPEFONTS",
+                "VERBOSE_BUILD"
             ]
         }
     },

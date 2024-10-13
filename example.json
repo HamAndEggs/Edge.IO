@@ -1,16 +1,23 @@
 {
-    "font1":
+    "style":{
+        "background":"0xff000060",
+        "font":
+        {
+            "file":"./liberation_serif_font/LiberationSerif-Regular.ttf",
+            "size":60    
+        }
+    },
+    "grid":[2,2],
+    "clock":
     {
-        "type":"freetypefont",
-        "file":"./liberation_serif_font/LiberationSerif-Regular.ttf",
-        "size":60
-    },
-    "style1":{
-        "type":"style",
-        "background":"blue"
-    },
-    "root":{
-        "text":"Example",
-        "style":"style1"
+        "padding":0.05,
+        "text":"12:56",
+        "style":{
+            "background":"0xff000000",
+            "border":"0xffffffff",
+            "thickness":3,
+            "radius":0.1
+
+        }
     }
 }

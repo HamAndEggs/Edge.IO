@@ -1,6 +1,9 @@
 
 #include "Application.h"
 
+#include <iostream>
+#include <sstream>
+#include <fstream>
 #include <filesystem>
 
 class MyUI : public eui::Application
@@ -11,15 +14,19 @@ public:
 
     virtual void OnOpen(eui::Graphics* pGraphics)
     {
-        mLoading = new eui::Element;
+/*        mLoading = new eui::Element;
         mLoading->SetID("Loading screen");
         mLoading->SetText("Loading");
         mLoading->GetStyle().mBackground = eui::COLOUR_BLUE;
 
         int normalFont = pGraphics->FontLoad(mPath + "liberation_serif_font/LiberationSerif-Regular.ttf",40);
-        mLoading->SetFont(normalFont);
+        mLoading->SetFont(normalFont);*/
 
-        mRoot = mLoading;
+        const std::string jsonString = LoadFileIntoString("./example.json");
+        const tinyjson::JsonProcessor Json(jsonString,true);
+
+
+        mRoot = new eui::Element(Json.GetRoot(),pGraphics);
     };
 
     virtual void OnClose()
@@ -40,6 +47,23 @@ private:
     const std::string mPath;
     eui::ElementPtr mLoading = nullptr;
     eui::ElementPtr mRoot = nullptr;
+
+
+    std::string LoadFileIntoString(const std::string& pFilename)
+    {
+        std::ifstream jsonFile(pFilename);
+        if( jsonFile.is_open() )
+        {
+            std::stringstream jsonStream;
+            jsonStream << jsonFile.rdbuf();// Read the whole file in...
+
+            return jsonStream.str();
+        }
+
+        std::throw_with_nested(std::runtime_error("Jons file not found " + pFilename));
+
+        return "";
+    }
 };
 
 
