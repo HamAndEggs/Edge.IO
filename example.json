@@ -7,17 +7,24 @@
             "size":60    
         }
     },
-    "grid":[2,2],
+    "grid":[3,3],
+    "image1":
+    {
+        "pos":[0,0],
+        "style":{
+            "texture":"./test256.tga"
+        }
+    },
     "clock":
     {
-        "padding":0.05,
+        "pos":[1,1],
+        "pad":0.05,
         "text":"12:56",
         "style":{
             "background":"0xff000000",
             "border":"0xffffffff",
             "thickness":3,
             "radius":0.1
-
         }
     }
 }
