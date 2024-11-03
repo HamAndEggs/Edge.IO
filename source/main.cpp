@@ -1,5 +1,6 @@
 
 #include "Application.h"
+#include "ResourceMap.h"
 
 #include <iostream>
 #include <sstream>
@@ -14,24 +15,17 @@ public:
 
     virtual void OnOpen(eui::Graphics* pGraphics)
     {
-/*        mLoading = new eui::Element;
-        mLoading->SetID("Loading screen");
-        mLoading->SetText("Loading");
-        mLoading->GetStyle().mBackground = eui::COLOUR_BLUE;
-
-        int normalFont = pGraphics->FontLoad(mPath + "liberation_serif_font/LiberationSerif-Regular.ttf",40);
-        mLoading->SetFont(normalFont);*/
-
+        std::cout << "******* Loading application\n";
         const std::string jsonString = LoadFileIntoString("./example.json");
         const tinyjson::JsonProcessor Json(jsonString,true);
 
-
-        mRoot = new eui::Element(Json.GetRoot(),pGraphics);
+        mResources = new eui::ResouceMap(Json.GetRoot(),pGraphics);
+        mRoot = new eui::Element(Json.GetRoot(),mResources);
     };
 
     virtual void OnClose()
     {
-        delete mLoading;
+
     }
 
     virtual void OnUpdate(){}
@@ -45,8 +39,8 @@ public:
 
 private:
     const std::string mPath;
-    eui::ElementPtr mLoading = nullptr;
     eui::ElementPtr mRoot = nullptr;
+    eui::ResouceMapPtr mResources;
 
 
     std::string LoadFileIntoString(const std::string& pFilename)

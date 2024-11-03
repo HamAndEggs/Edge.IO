@@ -9,6 +9,7 @@
         "./source/FileDownload.cpp",
         "./EdgeUI/source/Element.cpp",
         "./EdgeUI/source/TinyPNG.cpp",
+        "./EdgeUI/source/ResourceMap.cpp",
         "./EdgeUI/source/GL/FreeTypeFont.cpp",
         "./EdgeUI/source/GL/GLDiagnostics.cpp",
         "./EdgeUI/source/GL/GLShader.cpp",

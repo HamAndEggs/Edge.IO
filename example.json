@@ -1,18 +1,31 @@
 {
+    "resource":
+    {
+        "font1":
+        {
+            "font":"./liberation_serif_font/LiberationSerif-Regular.ttf",
+            "size":60    
+        },
+        "button":
+        {
+            "font":"./liberation_serif_font/LiberationSerif-Regular.ttf",
+            "size":20    
+        },
+        "test256":
+        {
+            "texture":"./test256.tga"
+        }
+    },
     "style":{
         "background":"0xff000060",
-        "font":
-        {
-            "file":"./liberation_serif_font/LiberationSerif-Regular.ttf",
-            "size":60    
-        }
+        "font":"font1"
     },
     "grid":[3,3],
     "image1":
     {
         "pos":[0,0],
         "style":{
-            "texture":"./test256.tga"
+            "texture":"test256"
         }
     },
     "clock":
@@ -25,6 +38,33 @@
             "border":"0xffffffff",
             "thickness":3,
             "radius":0.1
+        }
+    },
+    "buttons":
+    {
+        "pos":[1,0],
+        "pad":0.05,
+        "grid":[3,3],
+        "style":{
+            "border":"0xffffffff",
+            "thickness":3,
+            "radius":0.1,
+            "font":"button"
+        },
+        "but1":
+        {
+            "pos":[0,0],
+            "text":"but1"
+        },
+        "but2":
+        {
+            "pos":[1,0],
+            "text":"but2"
+        },
+        "but3":
+        {
+            "pos":[2,0],
+            "text":"but3"
         }
     }
 }
