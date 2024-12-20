@@ -49,20 +49,23 @@
             "border":"0xffffffff",
             "thickness":3,
             "radius":0.1,
-            "font":"button"
+            "font":"eui::button"
         },
         "but1":
         {
+            "control":"eui::button",
             "pos":[0,0],
             "text":"but1"
         },
         "but2":
         {
+            "control":"eui::button",
             "pos":[1,0],
             "text":"but2"
         },
         "but3":
         {
+            "control":"eui::button",
             "pos":[2,0],
             "text":"but3"
         }

@@ -1,12 +1,6 @@
 {
     "source_files": [
         "./source/main.cpp",
-        "./source/MQTTData.cpp",
-        "./source/sgp30.cpp",
-        "./source/TinyTools.cpp",
-        "./source/TinyWeather.cpp",
-        "./source/DisplayTideData.cpp",
-        "./source/FileDownload.cpp",
         "./EdgeUI/source/Element.cpp",
         "./EdgeUI/source/TinyPNG.cpp",
         "./EdgeUI/source/ResourceMap.cpp",
